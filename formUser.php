@@ -15,19 +15,19 @@ include 'template/base-head.php';
 		  </div>
 		  <div class="mb-3">
 			<label for="nom" class="form-label">Nom</label>
-			<input type="email" class="form-control" id="nom" aria-describedby="emailHelp">
+			<input type="text" class="form-control" id="nom" aria-describedby="emailHelp" name="nom">
 		  </div>
 		  <div class="mb-3">
 			<label for="penom" class="form-label">Prenom</label>
-			<input type="email" class="form-control" id="prenom" aria-describedby="emailHelp">
+			<input type="text" class="form-control" id="prenom" aria-describedby="emailHelp" name="prenom">
 		  </div>
 		  <div class="mb-3">
 			<label for="email" class="form-label">Email</label>
-			<input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+			<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
 		  </div>
 		  <div class="mb-3">
 			<label for="exampleInputPassword1" class="form-label">Password</label>
-			<input type="password" class="form-control" id="password1">
+			<input type="password" class="form-control" id="password1" name="password">
 		  </div>
 		  <div class="mb-3">
 			<label for="exampleInputPassword1" class="form-label" >Confirmation de password</label>
