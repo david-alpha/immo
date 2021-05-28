@@ -6,27 +6,38 @@ include 'template/connect.php';
 	$stmt = $dbh->query($requete);		
 ?>
 <body>
-<table class="table-primary">
+<div class="container">
+			<!-- insertion du menu - debut -->
+			<?php
+				include 'template/menu.php';
+			?>
+			<!-- insertion du menu - fin -->
+		<h1> Liste des utilisateurs  </h1>
+<table class="table">
 	<thead>
 		<tr>
-			<td>id</td><td>Nom</td><td>Prenom</td>
+			<th>id</th><th>Nom</td><th>Prenom</th><th>Email</th>
 		</tr>
 	</thead>
 	<tbody>
 	<?php
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 		?>
-		<tr><td>
+		<tr><td scope="col">
 		<?php
 		echo htmlspecialchars($row['id']);
 		?>
-		</td><td>
+		</td><td scope="col">
 		<?php
 		echo htmlspecialchars($row['nom']);
 		?>
-		</td><td>
+		</td><td scope="col">
 		<?php
 		echo htmlspecialchars($row['prenom']);
+		?>
+		</td><td scope="col">
+		<?php
+		echo htmlspecialchars($row['email']);
 		?>
 		</td></tr>
 		<?php		
@@ -34,7 +45,10 @@ include 'template/connect.php';
 	?>	
 	</tbody>
 </table>
+</div>
+<!-- insertion js --- debut -->
+	<?php
+	include 'template/base-footer.php';
+	?>
+	<!-- insertion js --- fin -->
 </body>
-<?php
-
-?>
