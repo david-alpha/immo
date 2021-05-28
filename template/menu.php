@@ -22,6 +22,7 @@
           </ul>
         </li>
       </ul>
+          <a class="nav-link" href="php/logout.php">Logout</a>	  
     </div>
   </div>
 </nav>
