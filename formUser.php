@@ -4,6 +4,11 @@ include 'template/base-head.php';
 
  <body>
 		<div class="container">
+			<!-- insertion du menu - debut -->
+			<?php
+				include 'template/menu.php';
+			?>
+			<!-- insertion du menu - fin -->
 		<h1> Formulaire d'ajout d'un Utilisateur  </h1>
 		<form action="php/ajoutUser.php" method="post">
 		  <div class="mb-3">
@@ -59,5 +64,16 @@ include 'template/base-head.php';
 		  }
 		  }
 	</script>
+	<!-- insertion js --- debut -->
+	<?php
+	include 'template/base-footer.php';
+	?>
+	<!-- insertion js --- fin -->
+	
     </body>
 </html>
+
+
+
+
+
