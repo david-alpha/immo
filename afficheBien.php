@@ -2,7 +2,7 @@
 include 'template/base-head.php';
 include 'template/connect.php';
 //Requetes DEBUT
-	$requete = "SELECT * FROM biens";
+	$requete = "SELECT * FROM biens, user WHERE biens.userproprio = user.id";
 	$stmt = $dbh->query($requete);		
 ?>
 <body>
@@ -49,7 +49,7 @@ include 'template/connect.php';
 		?>
 		</td><td scope="col">
 		<?php
-		echo htmlspecialchars($row['userproprio']);
+		echo htmlspecialchars($row['nom']);
 		?>
 		</td></tr>
 		<?php		
