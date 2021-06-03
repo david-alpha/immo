@@ -31,8 +31,8 @@ include 'template/connect.php'; //fichier obligatoire pour la connexion à la BD
 			</select>
 		  </div>
 		  <div class="mb-3">
-			<label for="etage" class="form-label">Type</label>
-			<select name="etage" id="etage" class="form-control">
+			<label for="type" class="form-label">Type</label>
+			<select name="type" id="type" class="form-control">
 				<option value="Appartement">Appartement</option>
 				<option value="Maison">Maison</option>
 				<option value="Immeuble">Immeuble</option>
