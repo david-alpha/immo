@@ -16,13 +16,15 @@ include '../template/connect.php';
 		$stmt->execute( array( ':email' => $email, ':password' => $password ) );
  
 		$row = $stmt->fetch(PDO::FETCH_BOTH); // ici, fetch() car UNE SEULE LIGNE récupérée (id est UNIQUE)
- 
-		echo 'nom du user : '.$row['nom'];	
 		echo "<br>";
 		 if($row){
-			echo "c'est bon ";
+			//Ligne permettant la redirection vers la page index.html.
+			  header('location:../afficheDashboard.php');
+			  exit();
 		 }else{
-			echo "c'est pas bon";  
+			echo "c'est pas bon. Vous n'avez pas les autorisations.";  
+			echo "<br>";  
+			echo "<a href=../index>Cliquez-ici pour vous reconnecter</a>";  
 		 }
 //Vérification en base de données -- Fin
 
